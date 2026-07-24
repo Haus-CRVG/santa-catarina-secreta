@@ -1,0 +1,1172 @@
+:root{
+
+    --oceano:#0B4F6C;
+    --ceu:#4DA8DA;
+    --areia:#F5F1E8;
+    --texto:#4B5563;
+    --verde:#4C956C;
+    --sun:#F4A261;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--areia);
+    color:var(--texto);
+
+}
+
+.hero{
+
+    height:100vh;
+
+    background-image:url("../img/capa.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    color:white;
+
+    max-width:800px;
+
+    padding:30px;
+
+}
+
+.subtitle{
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    font-size:.9rem;
+
+}
+
+.hero h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:5rem;
+
+    margin:25px 0;
+
+}
+
+.author{
+
+    font-size:1.3rem;
+
+    color:#ddd;
+
+    margin-bottom:25px;
+
+}
+
+.description{
+
+    line-height:1.9;
+
+    font-size:1.15rem;
+
+}
+
+.btn-start{
+
+    display:inline-block;
+
+    margin-top:45px;
+
+    padding:16px 40px;
+
+    border-radius:40px;
+
+    background:white;
+
+    color:var(--oceano);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-start:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.welcome{
+
+    padding:100px 20px;
+
+}
+
+.welcome .container{
+
+    max-width:1200px;
+
+}
+
+.welcome h2{
+
+    font-family:'Playfair Display';
+
+    color:var(--oceano);
+
+    margin-bottom:40px;
+
+    font-size:3rem;
+
+}
+
+.welcome p{
+
+    font-size:1.1rem;
+
+    line-height:2;
+
+    margin-bottom:20px;
+
+}
+
+.final-text{
+
+    font-size:1.3rem;
+
+    font-weight:600;
+
+    color:var(--verde);
+
+}
+
+.signature{
+
+    margin-top:50px;
+
+    font-family:'Playfair Display';
+
+    font-size:2rem;
+
+}
+
+/* ==========================================================
+   CAPÍTULO 1
+========================================================== */
+
+.chapter{
+
+    color: var(--sun);
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+.welcome{
+
+    padding:120px 0;
+
+}
+
+.welcome h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--oceano);
+
+    font-size:3.5rem;
+
+    margin:20px 0 40px;
+
+}
+
+.welcome p{
+
+    line-height:2;
+
+    font-size:1.08rem;
+
+}
+
+blockquote{
+
+    margin:45px 0;
+
+    padding:25px 35px;
+
+    border-left:5px solid var(--ceu);
+
+    background:white;
+
+    border-radius:12px;
+
+    font-size:1.15rem;
+
+    font-style:italic;
+
+    color:var(--oceano);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.assinatura{
+
+    margin-top:50px;
+
+    font-size:1.2rem;
+
+    color:var(--verde);
+
+}
+
+.travel-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+
+    position:sticky;
+
+    top:50px;
+
+}
+
+.travel-card h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--oceano);
+
+    margin-bottom:25px;
+
+}
+
+.travel-card hr{
+
+    margin-bottom:25px;
+
+}
+
+.info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:18px;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid #efefef;
+
+}
+
+.info:last-child{
+
+    border:none;
+
+    margin-bottom:0;
+
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar-custom{
+
+    background:transparent;
+
+    transition:.35s;
+
+    padding:20px 0;
+
+}
+
+.navbar-custom.scrolled{
+
+    background:white;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    padding:12px 0;
+
+}
+
+.navbar-brand{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:1.5rem;
+
+    color:white !important;
+
+}
+
+.navbar-custom.scrolled .navbar-brand{
+
+    color:var(--oceano) !important;
+
+}
+
+.nav-link{
+
+    color:white !important;
+
+    margin-left:18px;
+
+    font-weight:500;
+
+}
+
+.navbar-custom.scrolled .nav-link{
+
+    color:var(--texto) !important;
+
+}
+
+.nav-link:hover{
+
+    color:var(--sun) !important;
+
+}
+
+/* =======================================================
+   CAPÍTULO 2
+=======================================================*/
+
+.destinos{
+
+    background:white;
+
+    padding:120px 0;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:auto;
+
+    margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+    font-family:'Playfair Display';
+
+    color:var(--oceano);
+
+    font-size:3rem;
+
+    margin:20px 0;
+
+}
+
+.section-title p{
+
+    line-height:2;
+
+}
+
+.banner-praia{
+
+    margin-bottom:60px;
+
+}
+
+.banner-praia img{
+
+    width:100%;
+
+    height:450px;
+
+    object-fit:cover;
+
+}
+
+.destino-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    position:relative;
+
+    height:100%;
+
+}
+
+.destino-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.destino-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+.destino-card .card-body{
+
+    padding:25px;
+
+}
+
+.destino-card h4{
+
+    font-family:'Playfair Display';
+
+    color:var(--oceano);
+
+}
+
+.badge-mrb{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    background:#fff;
+
+    color:#d63384;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================================
+   CAPÍTULO 3
+========================================================== */
+
+.praias{
+
+    padding:140px 0;
+
+    background:#F8FAFC;
+
+}
+
+.quote{
+
+    margin-top:35px;
+
+    font-family:'Playfair Display';
+
+    color:var(--verde);
+
+    font-size:2rem;
+
+    font-style:italic;
+
+}
+
+/* ==========================================================
+   PRAIA DA PINHEIRA
+========================================================== */
+
+.praia-section{
+
+    padding:90px 0 140px;
+
+    background:#F8FAFC;
+
+}
+
+.praia-header{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.praia-numero{
+
+    color:var(--sun);
+
+    letter-spacing:4px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+.praia-header h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:3.3rem;
+
+    color:var(--oceano);
+
+    margin:18px 0;
+
+}
+
+.praia-frase{
+
+    font-size:1.35rem;
+
+    color:#6c757d;
+
+    font-style:italic;
+
+}
+
+.praia-banner{
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    box-shadow:0 25px 50px rgba(0,0,0,.12);
+
+}
+
+.praia-banner img{
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+}
+
+.praia-texto p{
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+}
+
+.passaporte{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+    position:sticky;
+
+    top:100px;
+
+}
+
+.passaporte h4{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--oceano);
+
+    margin-bottom:25px;
+
+}
+
+.passaporte .item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.passaporte .item:last-child{
+
+    border-bottom:none;
+
+}
+
+/* ==========================================================
+   EXPERIÊNCIA MR. B
+========================================================== */
+
+.mrb-box{
+
+    margin-top:80px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+}
+
+.mrb-box h3{
+
+    color:var(--oceano);
+
+    font-family:'Playfair Display';
+
+    margin-bottom:25px;
+
+}
+
+.mrb-box p{
+
+    line-height:2;
+
+}
+
+.mrb-quote{
+
+    background:#EEF7FF;
+
+    border-left:5px solid var(--oceano);
+
+    padding:30px;
+
+    border-radius:18px;
+
+    font-style:italic;
+
+    height:100%;
+
+}
+
+.mrb-quote h4{
+
+    margin-bottom:20px;
+
+    color:var(--oceano);
+
+}
+
+.dicas-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.dica-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.dica-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.emoji{
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+}
+
+.dica-card h4{
+
+    font-family:'Playfair Display';
+
+    color:var(--oceano);
+
+    margin-bottom:15px;
+
+}
+
+.dica-card p{
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   PÁGINAS INTERNAS
+========================================================== */
+
+.page-header{
+
+    padding:90px 0 40px;
+
+    text-align:center;
+
+}
+
+.page-tag{
+
+    letter-spacing:4px;
+
+    color:var(--sun);
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+}
+
+.page-header h1{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--oceano);
+
+    font-size:3.4rem;
+
+    margin:20px 0;
+
+}
+
+.page-header p{
+
+    font-size:1.3rem;
+
+    color:#666;
+
+    font-style:italic;
+
+}
+
+.banner-page{
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    margin-bottom:70px;
+
+    box-shadow:0 25px 50px rgba(0,0,0,.12);
+
+}
+
+.banner-page img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+}
+
+.intro-page{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.intro-page h2{
+
+    color:var(--oceano);
+
+    margin-bottom:30px;
+
+    font-family:'Playfair Display';
+
+}
+
+.intro-page p{
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================================
+   CRITÉRIOS DE LOCALIZAÇÃO
+========================================================== */
+
+.criterios{
+
+    padding:90px 0;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title span{
+
+    color:var(--sun);
+
+    letter-spacing:4px;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+}
+
+.section-title h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--oceano);
+
+    font-size:2.8rem;
+
+    margin:18px 0;
+
+}
+
+.section-title p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+.criterios-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.criterio-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.criterio-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.criterio-card .icone{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.criterio-card h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--oceano);
+
+    margin-bottom:15px;
+
+}
+
+.criterio-card strong{
+
+    display:block;
+
+    margin-bottom:20px;
+
+    color:#0d6efd;
+
+}
+
+.criterio-card p{
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+/* Cores */
+
+.praia{
+
+    border-top:6px solid #2196F3;
+
+}
+
+.caminhada{
+
+    border-top:6px solid #2E7D32;
+
+}
+
+.media{
+
+    border-top:6px solid #F9A825;
+
+}
+
+.carro{
+
+    border-top:6px solid #757575;
+
+}
+
+/* ==========================================================
+   HOTEL CARD
+========================================================== */
+
+.hotel-card{
+
+    display:grid;
+
+    grid-template-columns:380px 1fr;
+
+    gap:40px;
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+    margin-bottom:60px;
+
+}
+
+.hotel-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.hotel-content{
+
+    padding:40px;
+
+}
+
+.hotel-content h3{
+
+    font-family:'Playfair Display';
+
+    color:var(--oceano);
+
+    font-size:2rem;
+
+}
+
+.hotel-stars{
+
+    font-size:1.2rem;
+
+    margin:20px 0;
+
+}
+
+.hotel-icons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+.hotel-icons span{
+
+    background:#EEF6FF;
+
+    padding:10px 15px;
+
+    border-radius:40px;
+
+    font-size:.9rem;
+
+}
+
+.hotel-info{
+
+    display:flex;
+
+    gap:50px;
+
+    margin-bottom:25px;
+
+    font-size:1.05rem;
+
+}
+
+.mrb-choice{
+
+    display:inline-block;
+
+    background:#E3F2FD;
+
+    color:#0d47a1;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+}
+
+.hotel-description{
+
+    line-height:1.9;
+
+    margin-bottom:30px;
+
+}
+
+.btn-hotel{
+
+    background:var(--oceano);
+
+    color:white;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:14px 30px;
+
+    transition:.3s;
+
+}
+
+.btn-hotel:hover{
+
+    transform:translateY(-3px);
+
+}
+
