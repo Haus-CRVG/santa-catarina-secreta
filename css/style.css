@@ -708,3 +708,622 @@ blockquote {
         align-self: flex-start;
     }
 }
+
+/* =====================================================
+   SPRINT 2.0 - DA GARAGEM ATÉ O MAR
+===================================================== */
+
+.road-hero{
+    position:relative;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+
+    background:url("../img/roteiro/hero-estrada.jpg") center center/cover;
+}
+
+.road-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.70)
+    );
+
+}
+
+.road-content{
+
+    position:relative;
+    z-index:2;
+
+    text-align:center;
+    color:#fff;
+
+    max-width:900px;
+
+}
+
+.road-content h1{
+
+    font-family:"Playfair Display", serif;
+
+    font-size:4rem;
+
+    margin:20px 0;
+
+}
+
+.road-content .lead{
+
+    font-size:1.2rem;
+
+    max-width:700px;
+
+    margin:auto;
+
+    opacity:.95;
+
+}
+
+.road-route{
+
+    margin:40px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    font-size:1.1rem;
+
+}
+
+.road-route i{
+
+    color:#7dd3fc;
+
+    font-size:1.5rem;
+
+}
+
+.road-summary{
+
+    background:#f8fafc;
+
+    padding:90px 0;
+
+}
+
+.summary-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.summary-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.summary-card i{
+
+    font-size:2.6rem;
+
+    color:#0ea5e9;
+
+    margin-bottom:20px;
+
+}
+
+.summary-card h3{
+
+    font-size:1rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    color:#777;
+
+}
+
+.summary-card strong{
+
+    display:block;
+
+    margin-top:12px;
+
+    font-size:1.3rem;
+
+    color:#16324f;
+
+}
+
+@media(max-width:768px){
+
+    .road-content h1{
+
+        font-size:2.6rem;
+
+    }
+
+    .road-route{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+}
+
+.road-map{
+
+    padding:90px 0;
+
+    background:#ffffff;
+
+}
+
+.map-placeholder{
+
+    margin-top:50px;
+
+    border:3px dashed #d8e4ef;
+
+    border-radius:20px;
+
+    padding:80px;
+
+    text-align:center;
+
+    background:#f9fbfd;
+
+}
+
+.map-placeholder i{
+
+    font-size:70px;
+
+    color:#0ea5e9;
+
+    margin-bottom:25px;
+
+}
+
+.map-placeholder h3{
+
+    font-family:"Playfair Display", serif;
+
+    margin-bottom:20px;
+
+}
+
+.map-placeholder p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#666;
+
+}
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.road-timeline{
+
+    background:#f7fafc;
+
+    padding:100px 0;
+
+}
+
+.timeline{
+
+    position:relative;
+
+    margin-top:60px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:30px;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:#0ea5e9;
+
+}
+
+.timeline-item{
+
+    display:flex;
+
+    gap:30px;
+
+    margin-bottom:60px;
+
+    position:relative;
+
+}
+
+.timeline-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#0ea5e9;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+    flex-shrink:0;
+
+    z-index:2;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.timeline-content{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    width:100%;
+
+    transition:.3s;
+
+}
+
+.timeline-content:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.timeline-content span{
+
+    color:#0ea5e9;
+
+    font-weight:600;
+
+}
+
+.timeline-content h3{
+
+    margin:8px 0 15px;
+
+    font-family:"Playfair Display", serif;
+
+}
+
+.timeline-content p{
+
+    color:#666;
+
+    margin:0;
+
+}
+
+/*==================================================
+PARADAS
+==================================================*/
+
+.stop-info{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin:20px 0;
+
+}
+
+.stop-info span{
+
+    background:#eef8ff;
+
+    color:#0ea5e9;
+
+    padding:8px 14px;
+
+    border-radius:50px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+.btn-stop{
+
+    display:inline-block;
+
+    background:#0ea5e9;
+
+    color:#fff;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-stop:hover{
+
+    background:#0284c7;
+
+    color:#fff;
+
+}
+
+/*==================================================
+PARADAS RECOMENDADAS
+==================================================*/
+
+.road-stops{
+
+    padding:100px 0;
+
+    background:#ffffff;
+
+}
+
+.stop-card{
+
+    max-width:800px;
+
+    margin:50px auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.stop-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.stop-header h3{
+
+    margin:0;
+
+    font-family:"Playfair Display",serif;
+
+}
+
+.stop-header span{
+
+    background:#0ea5e9;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+.rating{
+
+    margin:20px 0;
+
+    font-size:1.1rem;
+
+}
+
+.stop-card ul{
+
+    margin:25px 0;
+
+    padding-left:20px;
+
+}
+
+.stop-card li{
+
+    margin-bottom:12px;
+
+}
+
+/* ===================================================
+   HERO - DA GARAGEM ATÉ O MAR
+=================================================== */
+
+.travel-hero{
+
+    position:relative;
+
+    height:100vh;
+
+    background:url("../img/viagem/estrada.jpg") center center/cover;
+
+    display:flex;
+
+    align-items:center;
+
+    color:#fff;
+
+}
+
+.travel-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+.travel-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+
+}
+
+.travel-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:#ffffff22;
+
+    backdrop-filter:blur(6px);
+
+    border-radius:30px;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+}
+
+.travel-content h1{
+
+    font-size:68px;
+
+    font-family:'Playfair Display';
+
+    margin-bottom:25px;
+
+}
+
+.travel-content .lead{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    opacity:.95;
+
+    max-width:700px;
+
+}
+
+.travel-info{
+
+    margin-top:45px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.travel-info div{
+
+    background:white;
+
+    color:#333;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.travel-info strong{
+
+    display:block;
+
+    color:#0d6efd;
+
+    margin-bottom:8px;
+
+}
+
+.travel-info span{
+
+    font-size:18px;
+
+}
