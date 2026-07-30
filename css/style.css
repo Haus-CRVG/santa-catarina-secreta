@@ -1327,3 +1327,87 @@ PARADAS RECOMENDADAS
     font-size:18px;
 
 }
+
+.calculadora-viagem{
+
+    max-width:1100px;
+
+    margin:60px auto;
+
+    background:#ffffff;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.calculadora-viagem h2{
+
+    margin-bottom:30px;
+
+}
+
+.form-viagem{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+.campo{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.campo label{
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+.campo input{
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+}
+
+#btnCalcular{
+
+    margin-top:30px;
+
+    height:50px;
+
+    border:none;
+
+    background:#0d6efd;
+
+    color:white;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#btnCalcular:hover{
+
+    background:#084ec4;
+
+}
