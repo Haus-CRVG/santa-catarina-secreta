@@ -187,9 +187,7 @@ async function calcularViagem() {
 
     `;
 
-});
-
-}    
+}); 
 
     catch (erro) {
 
