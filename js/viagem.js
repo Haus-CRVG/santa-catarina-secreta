@@ -121,29 +121,19 @@ async function calcularViagem() {
         const tempo =
             rota.duration / 3600;
 
-        const litros =
-            distancia / consumo;
-
-        const custo =
-            litros * gasolina;
-
-        document.getElementById("km").innerHTML =
-            distancia.toFixed(0) + " km";
-
-        document.getElementById("tempo").innerHTML =
-            tempo.toFixed(1) + " h";
-
-        document.getElementById("litros").innerHTML =
-            litros.toFixed(1) + " L";
-
-        document.getElementById("valor").innerHTML =
-            "R$ " + custo.toFixed(2);
+        // Agora os cálculos ficam no calculos.js
+        atualizarResumoViagem(
+            distancia,
+            tempo,
+            consumo,
+            gasolina
+        );
 
         document.getElementById("rotaKm").innerHTML =
             distancia.toFixed(0) + " km";
 
         document.getElementById("rotaTempo").innerHTML =
-            tempo.toFixed(1) + " horas";
+            converterHoras(tempo);
 
         document.getElementById("rotaPedagios").innerHTML =
             "Em breve";
@@ -152,7 +142,54 @@ async function calcularViagem() {
 
         carregarCidades();
 
-    }
+        atualizarPainelVeiculo(distancia);
+
+        const abastecimentos =
+            gerarPlanoAbastecimento(distancia);
+
+        const div =
+            document.getElementById("planoAbastecimento");
+
+        if (abastecimentos.length === 0) {
+
+            div.innerHTML =
+                "<p>✅ Nenhum abastecimento será necessário.</p>";
+
+        } else {
+
+            div.innerHTML = "";
+
+        abastecimentos.forEach((km, indice) => {
+
+    const posto = procurarPosto(km);
+
+    div.innerHTML += `
+
+        <div class="item-abastecimento">
+
+            <h5>
+                ⛽ ${indice + 1}º abastecimento
+            </h5>
+
+            <strong>${posto.nome}</strong><br>
+
+            📍 ${posto.cidade}<br>
+
+            🏷 ${posto.bandeira}<br>
+
+            ⭐ ${posto.nota}<br>
+
+            🕒 ${posto.aberto}<br>
+
+            <small>Km ${posto.km}</small>
+
+        </div>
+
+    `;
+
+});
+
+}    
 
     catch (erro) {
 
@@ -222,7 +259,7 @@ function carregarParadas() {
 
         lista.innerHTML += `
 
-            <div class="parada">
+                <div class="parada">
 
                 <h4>
 
@@ -250,7 +287,7 @@ function carregarParadas() {
 
             </div>
 
-        `;
+                `;
 
     });
 
@@ -296,15 +333,15 @@ function carregarCidades() {
 
         lista.innerHTML += `
 
-            <span class="badge bg-success m-2 p-3">
+                <span class="badge bg-success m-2 p-3">
 
-                <i class="bi bi-geo-alt-fill"></i>
+                    <i class="bi bi-geo-alt-fill"></i>
 
                 ${cidade}
 
             </span>
 
-        `;
+                `;
 
     });
 
@@ -334,13 +371,13 @@ function carregarRota() {
 
         lista.innerHTML += `
 
-            <li>
+                <li>
 
-                🛣 ${item}
+                🛣 ${ item }
 
             </li>
 
-        `;
+                `;
 
     });
 
@@ -452,4 +489,3 @@ document.addEventListener("keypress", function (e) {
 // Compartilhar roteiro
 
 console.log("🚙 Da Garagem até o Mar carregado com sucesso.");
-

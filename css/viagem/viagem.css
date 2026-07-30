@@ -1,0 +1,40 @@
+/* ==========================================================
+   DA GARAGEM ATÉ O MAR
+   Arquivo principal
+========================================================== */
+
+body{
+
+    background:#f5f7fb;
+
+    color:#333;
+
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+
+}
+
+/* Espaçamento padrão */
+
+section{
+
+    margin-bottom:60px;
+
+}
+
+/* Títulos */
+
+h2{
+
+    font-weight:700;
+
+    margin-bottom:30px;
+
+}
+
+.container{
+
+    position:relative;
+
+}
+
+@import url("viagem/timeline.css");

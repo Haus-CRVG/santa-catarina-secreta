@@ -1,0 +1,195 @@
+/* ==========================================================
+   MAPA DA VIAGEM
+========================================================== */
+
+.mapa{
+
+    margin-bottom:70px;
+
+}
+
+.mapa .container{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.mapa h2{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#0d6efd;
+
+    margin-bottom:30px;
+
+}
+
+.mapa h2 i{
+
+    margin-right:10px;
+
+}
+
+/* =========================
+   Leaflet
+========================= */
+
+#map{
+
+    width:100%;
+
+    height:600px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:4px solid #f5f7fb;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.10);
+
+}
+
+/* =========================
+   Google Maps
+========================= */
+
+#mapaGoogle{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.10);
+
+}
+
+#mapaGoogle iframe{
+
+    width:100%;
+
+    height:600px;
+
+    border:none;
+
+}
+
+/* =========================
+   Loader
+========================= */
+
+.mapa-loading{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:600px;
+
+    background:#f8f9fa;
+
+    border-radius:20px;
+
+}
+
+.spinner-viagem{
+
+    width:70px;
+
+    height:70px;
+
+    border:7px solid #e9ecef;
+
+    border-top:7px solid #0d6efd;
+
+    border-radius:50%;
+
+    animation:girar 1s linear infinite;
+
+}
+
+@keyframes girar{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* =========================
+   Legenda
+========================= */
+
+.legenda-mapa{
+
+    display:flex;
+
+    gap:25px;
+
+    margin-top:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.item-legenda{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:15px;
+
+    color:#555;
+
+}
+
+.item-legenda span{
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    display:inline-block;
+
+}
+
+.cor-rota{
+
+    background:#0d6efd;
+
+}
+
+.cor-parada{
+
+    background:#198754;
+
+}
+
+.cor-destino{
+
+    background:#dc3545;
+
+}

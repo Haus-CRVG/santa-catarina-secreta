@@ -1,0 +1,286 @@
+/* ==========================================================
+   GUIA DA VIAGEM
+========================================================== */
+
+.guia-viagem{
+
+    margin-bottom:70px;
+
+}
+
+.guia-viagem .container{
+
+    padding:0;
+
+}
+
+/* ==========================================================
+   PAINÉIS
+========================================================== */
+
+.painel-rota,
+.painel-paradas{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    height:100%;
+
+}
+
+.painel-rota h3,
+.painel-paradas h3{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#0d6efd;
+
+    margin-bottom:25px;
+
+}
+
+.painel-rota h3 i,
+.painel-paradas h3 i{
+
+    margin-right:10px;
+
+}
+
+/* ==========================================================
+   ROTA
+========================================================== */
+
+.lista-rota{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:25px 0;
+
+}
+
+.lista-rota li{
+
+    display:flex;
+
+    align-items:center;
+
+    padding:14px 18px;
+
+    margin-bottom:12px;
+
+    background:#f8f9fa;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    transition:.25s;
+
+}
+
+.lista-rota li:hover{
+
+    background:#eaf3ff;
+
+    transform:translateX(6px);
+
+}
+
+.painel-rota hr{
+
+    margin:30px 0;
+
+}
+
+.painel-rota p{
+
+    font-size:18px;
+
+    margin-bottom:15px;
+
+}
+
+.painel-rota strong{
+
+    color:#444;
+
+}
+
+.painel-rota span{
+
+    color:#0d6efd;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   PARADAS
+========================================================== */
+
+.card-parada{
+
+    background:#f8f9fa;
+
+    border-left:6px solid #0d6efd;
+
+    border-radius:15px;
+
+    padding:22px;
+
+    margin-bottom:20px;
+
+    transition:.25s;
+
+}
+
+.card-parada:hover{
+
+    transform:translateY(-6px);
+
+    background:#ffffff;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+}
+
+.card-parada h5{
+
+    font-size:19px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.card-parada strong{
+
+    display:block;
+
+    font-size:18px;
+
+    color:#333;
+
+    margin-bottom:5px;
+
+}
+
+.card-parada small{
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+.card-parada .badge{
+
+    margin-top:15px;
+
+    padding:8px 14px;
+
+    font-size:14px;
+
+}
+
+/* ==========================================================
+   ÍCONES POR TIPO
+========================================================== */
+
+.badge.bg-primary{
+
+    background:#0d6efd!important;
+
+}
+
+.badge.bg-success{
+
+    background:#198754!important;
+
+}
+
+.badge.bg-warning{
+
+    color:#000;
+
+}
+
+.badge.bg-danger{
+
+    background:#dc3545!important;
+
+}
+
+/* ==========================================================
+   ANIMAÇÕES
+========================================================== */
+
+.card-parada{
+
+    animation:fadeUp .5s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   SCROLL
+========================================================== */
+
+#listaParadas{
+
+    max-height:700px;
+
+    overflow-y:auto;
+
+    padding-right:10px;
+
+}
+
+#listaParadas::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+#listaParadas::-webkit-scrollbar-thumb{
+
+    background:#0d6efd;
+
+    border-radius:10px;
+
+}
+
+#listaParadas::-webkit-scrollbar-track{
+
+    background:#eeeeee;
+
+}

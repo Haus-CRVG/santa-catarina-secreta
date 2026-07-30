@@ -1,0 +1,45 @@
+/* ======================================================
+VEÍCULO
+======================================================*/
+
+.veiculo{
+
+    margin-bottom:60px;
+
+}
+
+.card-veiculo{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.card-veiculo h2{
+
+    margin-bottom:25px;
+
+}
+
+.item-veiculo{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.item-veiculo:last-child{
+
+    border:none;
+
+}

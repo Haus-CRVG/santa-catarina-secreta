@@ -1,0 +1,119 @@
+/* ==========================================================
+TIMELINE
+========================================================== */
+
+.timeline-viagem{
+
+    margin-bottom:80px;
+
+}
+
+.timeline-viagem .container{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.timeline-viagem h2{
+
+    margin-bottom:35px;
+
+    color:#0d6efd;
+
+    font-weight:700;
+
+}
+
+.item-timeline{
+
+    position:relative;
+
+    padding-left:60px;
+
+    margin-bottom:35px;
+
+}
+
+.item-timeline:last-child{
+
+    margin-bottom:0;
+
+}
+
+.item-timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:18px;
+
+    top:0;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#0d6efd;
+
+}
+
+.item-timeline::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:26px;
+
+    top:18px;
+
+    width:2px;
+
+    height:100%;
+
+    background:#d6d6d6;
+
+}
+
+.item-timeline:last-child::after{
+
+    display:none;
+
+}
+
+.hora{
+
+    font-size:15px;
+
+    color:#0d6efd;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+.titulo{
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.descricao{
+
+    color:#666;
+
+    margin-top:6px;
+
+}
