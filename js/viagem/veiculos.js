@@ -57,6 +57,13 @@ function obterVeiculoSelecionado(){
 
 function atualizarPainelVeiculo(distancia){
 
+    const painel = document.getElementById("dadosVeiculo");
+
+    if(!painel){
+        console.warn("Painel de veículo não encontrado.");
+        return;
+    }
+
     const v = obterVeiculoSelecionado();
 
     const autonomia =
@@ -68,50 +75,74 @@ function atualizarPainelVeiculo(distancia){
             autonomia
         );
 
-    document.getElementById("dadosVeiculo").innerHTML =
+    painel.innerHTML = `
 
-    `
+        <div class="item-veiculo">
 
-    <div class="item-veiculo">
+            <strong>Modelo</strong>
 
-        <strong>Modelo</strong>
+            <span>${v.nome}</span>
 
-        <span>${v.nome}</span>
+        </div>
 
-    </div>
+        <div class="item-veiculo">
 
-    <div class="item-veiculo">
+            <strong>Consumo</strong>
 
-        <strong>Consumo</strong>
+            <span>${v.consumo} km/L</span>
 
-        <span>${v.consumo} km/L</span>
+        </div>
 
-    </div>
+        <div class="item-veiculo">
 
-    <div class="item-veiculo">
+            <strong>Tanque</strong>
 
-        <strong>Tanque</strong>
+            <span>${v.tanque} litros</span>
 
-        <span>${v.tanque} litros</span>
+        </div>
 
-    </div>
+        <div class="item-veiculo">
 
-    <div class="item-veiculo">
+            <strong>Autonomia</strong>
 
-        <strong>Autonomia</strong>
+            <span>${autonomia.toFixed(0)} km</span>
 
-        <span>${autonomia.toFixed(0)} km</span>
+        </div>
 
-    </div>
+        <div class="item-veiculo">
 
-    <div class="item-veiculo">
+            <strong>Abastecimentos</strong>
 
-        <strong>Abastecimentos</strong>
+            <span>${abastecimentos}</span>
 
-        <span>${abastecimentos}</span>
-
-    </div>
+        </div>
 
     `;
+
+}
+
+/* ==========================================================
+   INICIALIZA VEÍCULOS
+========================================================== */
+
+function inicializarVeiculos(){
+
+    const select =
+        document.getElementById("veiculo");
+
+    const consumo =
+        document.getElementById("consumo");
+
+    if(!select || !consumo) return;
+
+    select.addEventListener("change", ()=>{
+
+        const v =
+            obterVeiculoSelecionado();
+
+        consumo.value =
+            v.consumo;
+
+    });
 
 }

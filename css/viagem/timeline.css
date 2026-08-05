@@ -1,119 +1,109 @@
-/* ==========================================================
-TIMELINE
-========================================================== */
-
 .timeline-viagem{
 
-    margin-bottom:80px;
+    margin:60px 0;
 
 }
 
-.timeline-viagem .container{
+.timeline-card{
 
-    background:#fff;
+    display:flex;
 
-    border-radius:22px;
+    cursor:pointer;
 
-    padding:40px;
+    margin-bottom:20px;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-}
-
-.timeline-viagem h2{
-
-    margin-bottom:35px;
-
-    color:#0d6efd;
-
-    font-weight:700;
+    transition:.30s;
 
 }
 
-.item-timeline{
+.timeline-card:hover{
 
-    position:relative;
-
-    padding-left:60px;
-
-    margin-bottom:35px;
+    transform:translateX(10px);
 
 }
 
-.item-timeline:last-child{
+.timeline-ponto{
 
-    margin-bottom:0;
+    width:70px;
 
-}
+    min-width:70px;
 
-.item-timeline::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:18px;
-
-    top:0;
-
-    width:18px;
-
-    height:18px;
+    height:70px;
 
     border-radius:50%;
 
     background:#0d6efd;
 
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.20);
+
+    position:relative;
+
 }
 
-.item-timeline::after{
+.timeline-ponto::after{
 
     content:"";
 
     position:absolute;
 
-    left:26px;
+    top:70px;
 
-    top:18px;
+    left:50%;
 
-    width:2px;
+    transform:translateX(-50%);
 
-    height:100%;
+    width:4px;
 
-    background:#d6d6d6;
+    height:60px;
+
+    background:#0d6efd;
 
 }
 
-.item-timeline:last-child::after{
+.timeline-card:last-child .timeline-ponto::after{
 
     display:none;
 
 }
 
-.hora{
+.timeline-info{
 
-    font-size:15px;
+    flex:1;
 
-    color:#0d6efd;
+    margin-left:25px;
 
-    font-weight:700;
+    background:white;
 
-    margin-bottom:6px;
+    padding:20px;
 
-}
+    border-radius:15px;
 
-.titulo{
-
-    font-size:22px;
-
-    font-weight:700;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 
 }
 
-.descricao{
+.timeline-info h5{
+
+    margin-top:5px;
+
+    margin-bottom:8px;
+
+}
+
+.timeline-info p{
+
+    margin:0;
 
     color:#666;
-
-    margin-top:6px;
 
 }

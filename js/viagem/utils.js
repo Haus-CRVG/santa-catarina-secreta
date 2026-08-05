@@ -50,11 +50,11 @@ function atualizarElemento(id, valor) {
 /**
  * Mostra um elemento
  */
-function mostrarElemento(id){
+function mostrarElemento(id) {
 
     const elemento = document.getElementById(id);
 
-    if(elemento){
+    if (elemento) {
 
         elemento.style.display = "block";
 
@@ -65,11 +65,11 @@ function mostrarElemento(id){
 /**
  * Esconde um elemento
  */
-function esconderElemento(id){
+function esconderElemento(id) {
 
     const elemento = document.getElementById(id);
 
-    if(elemento){
+    if (elemento) {
 
         elemento.style.display = "none";
 
@@ -80,7 +80,7 @@ function esconderElemento(id){
 /**
  * Remove espaços extras
  */
-function limparTexto(texto){
+function limparTexto(texto) {
 
     return texto.trim();
 
@@ -90,20 +90,20 @@ function limparTexto(texto){
  * Converte horas decimais
  * Ex.: 12.75 => 12h45
  */
-function converterHoras(horas){
+function converterHoras(horas) {
 
     const h = Math.floor(horas);
 
     const m = Math.round((horas - h) * 60);
 
-    return `${h}h${String(m).padStart(2,"0")}`;
+    return `${h}h${String(m).padStart(2, "0")}`;
 
 }
 
 /**
  * Delay (útil para animações)
  */
-function sleep(ms){
+function sleep(ms) {
 
     return new Promise(resolve => setTimeout(resolve, ms));
 
@@ -112,8 +112,30 @@ function sleep(ms){
 /**
  * Número aleatório
  */
-function numeroAleatorio(min,max){
+function numeroAleatorio(min, max) {
 
-    return Math.floor(Math.random() * (max-min+1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+
+}
+
+/* ==========================================================
+   FORMATA HORA
+========================================================== */
+
+function formatarHora(data) {
+
+    return data.toLocaleTimeString(
+
+        "pt-BR",
+
+        {
+
+            hour: "2-digit",
+
+            minute: "2-digit"
+
+        }
+
+    );
 
 }

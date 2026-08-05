@@ -133,3 +133,61 @@
     }
 
 }
+
+.painel-viagem{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-bottom:50px;
+
+}
+
+.info-box{
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.info-box small{
+
+    color:#666;
+
+    display:block;
+
+    margin-bottom:8px;
+
+}
+
+.info-box h4{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#0d6efd;
+
+}
+
+.progress{
+
+    height:28px;
+
+    border-radius:50px;
+
+}
+
+.progress-bar{
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
